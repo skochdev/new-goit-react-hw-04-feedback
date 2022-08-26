@@ -10,7 +10,6 @@ type State = {
 };
 
 export type PropertyNames = 'good' | 'neutral' | 'bad';
-export type Options = ['good', 'neutral', 'bad'];
 
 export class App extends React.Component<{}, State> {
   state: State = {
@@ -46,7 +45,7 @@ export class App extends React.Component<{}, State> {
         <Box m={5} display="flex" flexDirection="column" alignItems="center">
           <h1>Please leave a feedback</h1>
           <FeedbackOptions
-            options={statePropertyNames as Options}
+            options={statePropertyNames}
             onFeedback={onLeaveFeedback}
           />
           <h2>Statistics</h2>
